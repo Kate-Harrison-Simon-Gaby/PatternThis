@@ -1,0 +1,19 @@
+{
+  "name": "patternthis",
+  "version": "1.0.0",
+  "description": "'Random patterns'",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kate-Harrison-Simon-Gaby/PatternThis.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kate-Harrison-Simon-Gaby/PatternThis/issues"
+  },
+  "homepage": "https://github.com/Kate-Harrison-Simon-Gaby/PatternThis#readme"
+}
