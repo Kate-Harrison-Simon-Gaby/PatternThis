@@ -7,8 +7,11 @@ const generateBoard = require('./generateBoard')
 
 document.main.appendChild(currentState)
 
+const firstCharArray = ['0', '1']
+
 const intialState = {
-    board: generateBoard()
+    charArray: firstCharArray
+    board: generateBoard(firstCharArray)
 }
 
 const store = redux.createStore(reducer, intialState)
