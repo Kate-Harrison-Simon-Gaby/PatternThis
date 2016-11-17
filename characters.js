@@ -8,7 +8,6 @@ function addChars(string){
   //pass chars to be added into charArray
     //add char where no duplicates
   //return new charArray
-
 }
 
 function removeChars(string){
@@ -23,7 +22,6 @@ function removeChars(string){
 function outputChars(){
   //return current charArray
 }
-
 
 module.exports {
   addChars,
