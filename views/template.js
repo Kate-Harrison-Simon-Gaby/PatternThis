@@ -23,7 +23,8 @@ function createForms(state, dispatch) {
     return h('form', [
             h('input', {type: 'text', id: 'characterInput', placeholder: 'Enter a character'}),
             h('button', {type: 'submit', onclick: addCharacter}, 'Add Character'),
-            h('button', {type: 'submit', onclick: removeCharacter}, 'Remove Character')
+            h('button', {type: 'submit', onclick: removeCharacter}, 'Remove Character'),
+            h('button', {type: 'submit', onclick: regerate}, 'Regenerate')
         ])
 
 
@@ -40,5 +41,9 @@ function removeCharacter(e) {
     var newCharacter = document.getElementById('characterInput').value
     newCharacter = newCharacter.toString()
     dispatch({type: 'REMOVE_CHARACTER', payload: newCharacter})
+}
+function regerate(e){
+    e.preventDefault()
+    dispatch({type: 'GENERATE_BOARD'})
 }
 }
