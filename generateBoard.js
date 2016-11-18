@@ -7,7 +7,7 @@ function generateBoard(charArray) {
   // convert to 2D arr ... arr.fill(newarray(size))
   var board = new Array(size)
   board.fill(new Array(size))
-  
+
   // fill with data;
   // var fullBoard = board.map(function(arr){
   //   var test = arr.map(function(index){
@@ -20,7 +20,7 @@ function generateBoard(charArray) {
   for (var i = 0; i < board.length; i++) {
     for (var j = 0; j < board[i].length; j++) {
       var random = parseInt(Math.random() * charArray.length)
-       console.log(random);
+       // console.log(random);
        board[i][j] = charArray[random]
     }
   }
@@ -35,4 +35,4 @@ function generateBoard(charArray) {
 
 module.exports = generateBoard
 
-console.log(generateBoard(['0','1','#']));
+// console.log(generateBoard(['0','1','#']));
