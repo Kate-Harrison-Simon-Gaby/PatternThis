@@ -10,11 +10,17 @@ function reducer (state, action){
     var newState = clone(state)
     switch (action.type){
         case 'GENERATE_BOARD':
-            return
+            newState.board = generateBoard(newState.charArray)
+            return newState
         case 'ADD_CHARACTER':
-            return
+            newState.charArray = addChars(action.payload)
+            newState.board = generateBoard(newState.charArray)
+            return newState
         case 'REMOVE_CHARACTER':
-            return
-        case ''
+            newState.charArray = removeChars(action.payload)
+            newState.board = generateBoard(newState.charArray)
+            return newState
+        default:
+            return newState
     }
 }
