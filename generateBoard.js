@@ -1,12 +1,11 @@
 const characters = require('./characters')
 
-var size = 20
+var size = 100
 
 function generateBoard(charArray) {
   // generate base arr of length = size
   // convert to 2D arr ... arr.fill(newarray(size))
-  var board = new Array(size)
-  board.fill(new Array(size))
+  var board = new Array(15)
 
   // fill with data;
   // var fullBoard = board.map(function(arr){
@@ -18,10 +17,13 @@ function generateBoard(charArray) {
   // })
 
   for (var i = 0; i < board.length; i++) {
-    for (var j = 0; j < board[i].length; j++) {
+    console.log(board);
+    var newArray = []
+    board[i] = newArray
+    for (var j = 0; j < size; j++) {
       var random = parseInt(Math.random() * charArray.length)
        // console.log(random);
-       board[i][j] = charArray[random]
+       board[i].push(charArray[random])
     }
   }
 
@@ -35,4 +37,4 @@ function generateBoard(charArray) {
 
 module.exports = generateBoard
 
-// console.log(generateBoard(['0','1','#']));
+console.log(generateBoard(['0','1','#']));
