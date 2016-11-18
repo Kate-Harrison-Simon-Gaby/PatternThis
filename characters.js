@@ -21,7 +21,6 @@ function addChars(string){
 function removeChars(string){
   //take string
   var chars = string.split('')
-  console.log("bork", chars);
   //split into characters to be added (arr)
   //clone charArray
   var arrCopy = clone(charArray)
@@ -44,5 +43,3 @@ module.exports = {
   removeChars,
   outputChars
 }
-console.log(addChars("abc"))
-console.log(removeChars("bc"))
