@@ -17,9 +17,9 @@ function generateBoard(charArray) {
   // })
 
   for (var i = 0; i < board.length; i++) {
-    console.log(board.length);
+    console.log(board);
     var newArray = []
-    board[i].push(newArray)
+    board[i] = newArray
     for (var j = 0; j < size; j++) {
       var random = parseInt(Math.random() * charArray.length)
        // console.log(random);
