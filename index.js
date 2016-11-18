@@ -24,4 +24,6 @@ const updateView = () => {
 store.subscribe(updateView)
 
 const currentState = template(intialState, dispatch)
+console.log(currentState, 'Current State')
+console.log(intialState, 'Initial state')
 document.body.appendChild(currentState)
