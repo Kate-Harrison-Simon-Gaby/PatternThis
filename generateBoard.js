@@ -17,7 +17,7 @@ function generateBoard(charArray) {
   // })
 
   for (var i = 0; i < board.length; i++) {
-    console.log(board);
+    // console.log(board);
     var newArray = []
     board[i] = newArray
     for (var j = 0; j < size; j++) {
@@ -37,4 +37,4 @@ function generateBoard(charArray) {
 
 module.exports = generateBoard
 
-console.log(generateBoard(['0','1','#']));
+// console.log(generateBoard(['0','1','#']));

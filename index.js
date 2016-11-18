@@ -16,14 +16,12 @@ const store = redux.createStore(reducer, intialState)
 const dispatch = store.dispatch
 
 const updateView = () => {
-    const initialState = store.getState()
-    const newState = template(intialState, dispatch)
-    morph(currentState, newState)
+    const currentState = store.getState()
+    const newView = template(currentState, dispatch)
+    morph(currentView, newView)
 }
 
 store.subscribe(updateView)
 
-const currentState = template(intialState, dispatch)
-console.log(currentState, 'Current State')
-console.log(intialState, 'Initial state')
-document.body.appendChild(currentState)
+var currentView = template(intialState, dispatch)
+document.body.appendChild(currentView)

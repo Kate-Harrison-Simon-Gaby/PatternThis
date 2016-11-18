@@ -13,11 +13,13 @@ function reducer (state, action){
             newState.board = generateBoard(newState.charArray)
             return newState
         case 'ADD_CHARACTER':
-            newState.charArray = addChars(action.payload)
+            newState.charArray = addChars(newState.charArray, action.payload)
+            console.log(newState.charArray)
             newState.board = generateBoard(newState.charArray)
+            console.log(newState.board)
             return newState
         case 'REMOVE_CHARACTER':
-            newState.charArray = removeChars(action.payload)
+            newState.charArray = removeChars(newState.charArray, action.payload)
             newState.board = generateBoard(newState.charArray)
             return newState
         default:
