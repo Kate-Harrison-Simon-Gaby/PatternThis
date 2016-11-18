@@ -2,7 +2,7 @@ const redux = require('redux')
 const h = require('hyperscript')
 const morph = require('morphdom')
 const reducer = require('./reducer')
-const template = require('./template')
+const template = require('./views/template')
 const generateBoard = require('./generateBoard')
 
 document.main.appendChild(currentState)
@@ -10,7 +10,7 @@ document.main.appendChild(currentState)
 const firstCharArray = ['0', '1']
 
 const intialState = {
-    charArray: firstCharArray
+    charArray: firstCharArray,
     board: generateBoard(firstCharArray)
 }
 
