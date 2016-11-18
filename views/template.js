@@ -17,8 +17,8 @@ function displayTitle() {
 }
 
 function displayBoard(state,dispatch) {
-  h('div', state.board.forEach(function(firstArray) {
+  h('div', state.board.map(function(firstArray) {
       return h('div', firstArray.join('')
-    })
+    )})
   )
 }
