@@ -5,16 +5,21 @@ module.exports = template
 
 function template(state, dispatch) {
   return h('div', {}, [
-    displayBoard(state, dispatch),
+    displayChars(state,dispatch),
+    displayBoard(state, dispatch)
     //createForms(state, dispatch),
-    //displayChars(state,dispatch)
+
   ])
 }
 
 
 function displayBoard(state, dispatch) {
-  return h('div', state.board.map(function(firstArray) {
+  return h('p', state.board.map(function(firstArray) {
       return h('p', firstArray.join('')
     )})
   )
+}
+
+function displayChars(state, dispatch) {
+  return h('h2', "Characters: ", state.charArray.join())
 }
