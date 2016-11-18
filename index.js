@@ -10,7 +10,7 @@ document.main.appendChild(currentState)
 const firstCharArray = ['0', '1']
 
 const intialState = {
-    charArray: firstCharArray
+    charArray: firstCharArray,
     board: generateBoard(firstCharArray)
 }
 
